@@ -1,0 +1,9 @@
+.cpp、.c、.py 的作法皆不相同，但 .c 應該會慢一些 O(n^2)
+## .cpp 
+- 利用 map 儲存 {own_number, own_index}
+- 每次檢查 map 中是否有 key 是 partner_number
+## .c
+每次檢查自己之後的數字中是否有 partner_number
+## .py
+- 利用 dict 儲存 {partner_number, own_index}
+- 每次檢查 own_number 是否是自己之前的數字的 partner_number

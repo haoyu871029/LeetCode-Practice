@@ -1,0 +1,7 @@
+# c++
+- sol: 每個單字利用 stack 去反轉
+# c
+- c 語言中沒有 stack 這個資料結構可用，要自己實作。
+- sol: 每個單字透過其中字元兩兩交換的方式去反轉（另外寫一個 reverse function）
+# py
+- sol: 每個單字利用 List 去反轉（List可當stack用）

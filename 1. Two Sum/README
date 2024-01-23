@@ -1,3 +1,4 @@
+1. Two Sum
 .cpp、.c、.py 的作法皆不相同，但 .c 應該會慢一些 O(n^2)
 ## .cpp 
 - 利用 map 儲存 {own_number, own_index}

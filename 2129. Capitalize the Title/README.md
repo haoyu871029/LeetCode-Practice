@@ -1,3 +1,4 @@
+2129. Capitalize the Title
 - 2129.cpp
     > 先將 title 拆成一個一個單字存到 vector，再遍歷 vector 處理。
 - 2129.c

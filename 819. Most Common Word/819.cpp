@@ -9,6 +9,7 @@ class Solution {
 public:
     string mostCommonWord(string paragraph, vector<string>& banned) {
         string str, result;
+        int max_freq = 0;
         unordered_map<string, int> freq;
         unordered_set<string> banned_set(banned.begin(), banned.end());
 
@@ -16,8 +17,11 @@ public:
             c = ispunct(c) ? ' ' : tolower(c);
         istringstream ss(paragraph);
         while(ss>>str)
-            if(banned_set.count(str)==0 && freq[result]<++freq[str]) 
+            //freq[str]++;
+            if(banned_set.count(str)==0 && max_freq<++freq[str]) {
+                max_freq = freq[str];
                 result = str;
+            }
         return result;
     }
 };

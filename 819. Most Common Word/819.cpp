@@ -15,6 +15,7 @@ public:
 
         for(auto &c :paragraph)
             c = ispunct(c) ? ' ' : tolower(c);
+        
         istringstream ss(paragraph);
         while(ss>>str)
             //freq[str]++;

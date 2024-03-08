@@ -1,13 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 class Solution {
 public:
-    vector<int> findErrorNums(vector<int>& nums) {
-        vector<int> result(2);
+    vector<int> findErrorNums_1(vector<int>& nums) {
+        vector<int> result(2); //初始化一個大小為 2 的 vector
         int l = nums.size();
-        vector<int> record(l,0);
+        vector<int> record(l,0); //將 vector 內的 l 個元素初始化為 0
         for (auto &n :nums){
             record[n-1]++;
         } //for loop結束後，缺少數紀錄值為0，多餘數紀錄值為2，其餘數紀錄值為1
@@ -20,13 +21,33 @@ public:
             }
         }
         return result;
-    }
+    } //about 20ms
+    vector<int> findErrorNums_2(vector<int>& nums) {
+        vector<int> result;
+        map<int,int> mp;
+        for (int i=1; i<=nums.size(); i++){
+            mp[i] = 0;
+        }
+        for (auto &n :nums){
+            mp[n]++;
+        }
+        int rep, loss;
+        for (int i=1; i<=nums.size(); i++){
+            if (mp[i] == 0)
+                loss = i;
+            else if (mp[i] == 2)
+                rep = i;
+        }
+        result.push_back(rep);
+        result.push_back(loss);
+        return result;
+    } //about 100ms
 };
 
 int main(){
     Solution sol;
     vector<int> input{1,2,2,4};
-    vector<int> result = sol.findErrorNums(input);
+    vector<int> result = sol.findErrorNums_1(input);
     cout << result[0] << " " << result[1] << endl;
     return 0;
 }

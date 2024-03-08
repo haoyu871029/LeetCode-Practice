@@ -21,7 +21,7 @@ int* findErrorNums(int* nums, int numsSize, int* returnSize) {
     }
     free(record);
     return result;
-}
+} //about 20ms
 
 int main(){
     int nums[] = {1,2,2,4};

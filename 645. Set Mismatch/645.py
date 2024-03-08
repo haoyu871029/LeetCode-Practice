@@ -1,5 +1,5 @@
 class Solution(object):
-    def findErrorNums(self, nums):
+    def findErrorNums(self, nums): #about 140ms
         """
         :type nums: List[int]
         :rtype: List[int]

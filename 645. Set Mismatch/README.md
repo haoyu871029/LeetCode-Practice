@@ -1,7 +1,7 @@
 ## 645. Set Mismatch
 在具有 n 個數字的集合中(數字範圍為 1～n)，找出重複的數字和缺少的數字。
 
-Example.
+Example
 - Input: nums = [1,2,2,4]
 - Output: [2,3]
 ### .cpp
@@ -14,7 +14,7 @@ Example.
 測試結果是 version 1 比 version 2 快，原因如下：
 
 vector 在記憶體中是連續分配的，代表可以非常高效地被存取和遍歷。
-而在 C++中，map 通常是用平衡樹（如紅黑樹）來實現的，使得元素的插入和查找時間複雜度為O(log n)，比 vector 的 O(1) 時間複雜度要慢。
+而在 C++ 中，map 通常是用平衡樹（如紅黑樹）來實現的，使得元素的插入和查找時間複雜度為O(log n)，比 vector 的 O(1) 時間複雜度要慢。
 在一些要跑 n 圈的 loop 中，因為 map 的存取時間複雜度是 O(log n)，所以整體的時間複雜度會高於 O(n)
 ### .c
 和 .cpp version 1 做法相同，先記錄到 record 裡面，再遍歷 record 作檢查。

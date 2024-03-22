@@ -23,23 +23,21 @@ public:
         return result;
     } //about 20ms
     vector<int> findErrorNums_2(vector<int>& nums) {
-        vector<int> result;
+        vector<int> result(2);
         map<int,int> mp;
-        for (int i=1; i<=nums.size(); i++){
+        int l = nums.size();
+        for (int i=1; i<=l; i++){
             mp[i] = 0;
         }
         for (auto &n :nums){
             mp[n]++;
         }
-        int rep, loss;
-        for (int i=1; i<=nums.size(); i++){
-            if (mp[i] == 0)
-                loss = i;
-            else if (mp[i] == 2)
-                rep = i;
+        for (int i=1; i<=l; i++){
+            if (mp[i] == 2)
+                result[0] = i;
+            else if (mp[i] == 0)
+                result[1] = i;
         }
-        result.push_back(rep);
-        result.push_back(loss);
         return result;
     } //about 100ms
 };

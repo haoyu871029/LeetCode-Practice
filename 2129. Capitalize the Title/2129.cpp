@@ -1,34 +1,30 @@
 #include <iostream>
-#include <sstream>
+#include <sstream> //support istringstream
 #include <vector>
 using namespace std;
 
 class Solution {
 public:
     string capitalizeTitle(string title) {
-        string c_title = "";
+        string result = "";
         istringstream iss(title);
-        vector<string> words;
         string word;
-        while (iss >> word) {
-            words.push_back(word);
-        }
-        for (auto &str :words){
-            if (str.size() <= 2){
-                for (auto &c :str){
-                    c_title += tolower(c);
-                }
+        while (iss >> word){
+            if (word.size() <= 2){
+                for (auto &c :word){
+                    result += tolower(c);
+                }            
             }
             else{
-                c_title += toupper(str[0]);
-                for (int i=1; i<str.size(); i++){
-                    c_title += tolower(str[i]);
+                result += toupper(word[0]);
+                for (int i=1; i<word.size(); i++){
+                    result += tolower(word[i]);
                 }
             }
-            c_title += " ";
+            result += " ";
         }
-        c_title.pop_back();
-        return c_title;
+        result.pop_back();
+        return result;
     }
 };
 

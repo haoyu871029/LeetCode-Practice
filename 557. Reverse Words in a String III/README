@@ -1,8 +1,16 @@
-557. Reverse Words in a String III
-# c++
-- sol: 每個單字利用 stack 去反轉
-# c
+## 557. Reverse Words in a String III
+將一段句子中的每個單字作反轉，但保持單字間的順序不變。
+
+Example
+- Input: "Let's take LeetCode contest"
+- Output: "s'teL ekat edoCteeL tsetnoc"
+### .cpp
+- version 1
+    > 以字元為單位遍歷 string，利用 stack 來實現反轉。
+- version 2
+    > 用一個整數變數 lastSpace 來記錄目前單字的起始位置，並利用 reverse() 函數將單字反轉。
+### .c
 - c 語言中沒有 stack 這個資料結構可用，要自己實作。
 - sol: 每個單字透過其中字元兩兩交換的方式去反轉（另外寫一個 reverse function）
-# py
+### .py
 - sol: 每個單字利用 List 去反轉（List可當stack用）

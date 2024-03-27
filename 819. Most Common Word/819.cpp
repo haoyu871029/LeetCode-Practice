@@ -1,5 +1,6 @@
 #include <iostream>
-#include <sstream>
+#include <sstream> //support istringstream
+#include <cctype> //support ispunct(), tolower()
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
@@ -8,21 +9,27 @@ using namespace std;
 class Solution {
 public:
     string mostCommonWord(string paragraph, vector<string>& banned) {
-        string str, result;
-        int max_freq = 0;
+        string result;
         unordered_map<string, int> freq;
-        unordered_set<string> banned_set(banned.begin(), banned.end());
 
+        /* 對 paragraph 作預處理 */
         for(auto &c :paragraph)
             c = ispunct(c) ? ' ' : tolower(c);
+
+        /* 對 banned 作預處理 */
+        unordered_set<string> banned_set(banned.begin(), banned.end());
         
+        /* 記數的同時做判斷 */
+        int max_freq = 0;
         istringstream ss(paragraph);
-        while(ss>>str)
-            //freq[str]++;
-            if(banned_set.count(str)==0 && max_freq<++freq[str]) {
+        string str;
+        while(ss>>str){
+            freq[str]++;
+            if(banned_set.count(str)==0 && freq[str]>max_freq) {
                 max_freq = freq[str];
                 result = str;
             }
+        }
         return result;
     }
 };

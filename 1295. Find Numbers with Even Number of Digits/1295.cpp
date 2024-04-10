@@ -13,7 +13,6 @@ public:
                 digits++;
                 tmp /= 10;
             }
-            //cout << digits << endl;
             if (digits%2 == 0){
                 result++;
             }

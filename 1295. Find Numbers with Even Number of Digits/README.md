@@ -1,6 +1,6 @@
 ## 1295. Find Numbers with Even Number of Digits
 - [leetcode](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/)
-- [chatgpt](https://chat.openai.com/share/e3531fbf-3a3f-4a93-b07f-5efec4565794)
+- [chatgpt](https://chat.openai.com/share/b5b790bf-f668-4ca0-988c-c805190744e5)
 
 給一個數字集合，找出其中位數為偶數的數字有幾個。
 

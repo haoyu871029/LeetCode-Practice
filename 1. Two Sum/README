@@ -1,10 +1,25 @@
-1. Two Sum
+## 1. Two Sum
+- [leetcode](https://leetcode.com/problems/two-sum/description/)
+- [chatgpt](https://chat.openai.com/share/0240a61e-d898-4b76-9230-cd1ccc5853ff)
+
+給一個數字集合 nums 及一個 target，找出兩個數字的 index 使得兩數相加等於 target
+
+Example
+- input: nums = [2,7,11,15], target = 9
+- output: [0,1]
+
 .cpp、.c、.py 的作法皆不相同，但 .c 應該會慢一些 O(n^2)
-## .cpp 
-- 利用 map 儲存 {own_number, own_index}
-- 每次檢查 map 中是否有 key 是 partner_number
-## .c
+### .cpp 
+- 用一個 map 去存每個沒找到夥伴的人。
+    - key: number
+    - value: index
+- 每次都回去這個 map 找夥伴，沒找到就把自己存進去，等別人來找。
+
+map 若使用原本的 map 會比較慢，因為 map 是用紅黑樹實作的，查找時間複雜度是 O(logn)。
+若改成使用 unordered_map 會比 map 快一些，因為 unordered_map 是用 hash table 實作的，查找時間複雜度是 O(1)。
+在目前的程式碼中只需要改 line 10 的宣告即可，時間複雜度便可以從 O(nlogn) 降到 O(n)。
+### .c
 每次檢查自己之後的數字中是否有 partner_number
-## .py
+### .py
 - 利用 dict 儲存 {partner_number, own_index}
 - 每次檢查 own_number 是否是自己之前的數字的 partner_number

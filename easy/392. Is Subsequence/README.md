@@ -6,7 +6,6 @@
 Example
 - Input: s = "abc", t = "ahbgdc"
 - Output: true
-
 ### .cpp
 #### Version 1
 可以提前判斷的情況目前想到有三種

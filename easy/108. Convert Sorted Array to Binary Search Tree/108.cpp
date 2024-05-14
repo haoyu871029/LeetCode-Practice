@@ -13,7 +13,7 @@ struct TreeNode {
 
 TreeNode* build(vector<int>& nums,int left, int right){
     if(left > right)
-        return NULL;
+        return nullptr;
     int mid = (left+right)/2;
     TreeNode* NewNode = new TreeNode(nums[mid]);
     NewNode->left = build(nums, left, mid-1);

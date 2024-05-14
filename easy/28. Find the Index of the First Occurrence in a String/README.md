@@ -1,8 +1,6 @@
 ## 28. Find the Index of the First Occurrence in a String
 [leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/)
 
-Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
-
 給定兩個字串 needle 和 haystack，若 needle 是 haystack 的子字串，則回傳 needle 在 haystack 中第一次出現的位置，否則回傳 -1。
 
 Example 1

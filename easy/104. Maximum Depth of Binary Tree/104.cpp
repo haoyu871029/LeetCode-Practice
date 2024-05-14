@@ -39,7 +39,7 @@ int main(){
     root->right->right = new TreeNode(7);
     /* Test */
     Solution sol;
-    cout << sol.maxDepth(root) << endl;
+    cout << sol.maxDepth(root) << endl; //expected: 3
     return 0;
 }
 

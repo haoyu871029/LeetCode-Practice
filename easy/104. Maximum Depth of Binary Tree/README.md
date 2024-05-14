@@ -14,4 +14,4 @@ Example
 ```
 - Output: 3
 ### .cpp
-利用遞迴解，整顆 binary tree's  maximum depth 其實就是 root 左子樹的 maximum depth 和 root 右子樹的 maximum depth，取較大者再加一。
+利用遞迴解：整顆 binary tree's maximum depth 其實就是 root 左子樹的 maximum depth 和 root 右子樹的 maximum depth，取較大者再加一。

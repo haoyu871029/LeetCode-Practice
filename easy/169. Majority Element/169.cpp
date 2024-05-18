@@ -42,9 +42,9 @@ int Solution::majorityElement2(vector<int>& nums) {
 
 int main(){
     Solution sol;
-    vector<int> nums = {2,1,3,1,4};
-    cout << sol.majorityElement1(nums) << endl;
-    cout << sol.majorityElement2(nums) << endl;
+    vector<int> nums = {2,1,2,1,2};
+    cout << sol.majorityElement1(nums) << endl; //expect 2
+    cout << sol.majorityElement2(nums) << endl; //expect 2
     return 0;
 }
 

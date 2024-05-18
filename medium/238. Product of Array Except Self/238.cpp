@@ -1,6 +1,6 @@
 #include <vector>
 #include <iostream>
-#include <numeric>
+#include <numeric> //support partial_sum()
 using namespace std;
 
 vector<int> productExceptSelf(vector<int>& nums) {

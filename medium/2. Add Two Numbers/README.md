@@ -1,6 +1,5 @@
 ## 2. Add Two Numbers
 - [leetcode](https://leetcode.com/problems/add-two-numbers/description/)
-- [chatgpt]()
 
 給定 2 non-empty linked lists 分別代表 2 個非負整數，數字在 linked list 中是反向儲存的，且每個節點只會包含一個數字，請回傳兩數和所代表的 linked list。
 

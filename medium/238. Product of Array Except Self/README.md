@@ -1,4 +1,5 @@
 ## 238. Product of Array Except Self
+[leetcode](https://leetcode.com/problems/product-of-array-except-self/description/)
 
 給定一個整數陣列 nums，回傳一個整數陣列 ans，其中 ans[i] 是 nums 中除了 nums[i] 之外所有元素的乘積。限制是要在 O(n) 時間複雜度內完成，且不能使用除法運算。
 

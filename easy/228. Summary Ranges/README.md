@@ -1,4 +1,4 @@
-## 228. Summary Ranges
+# 228. Summary Ranges
 ## Description & Example
 [leetcode](https://leetcode.com/problems/summary-ranges/)
 
@@ -52,3 +52,9 @@ for (int i=1; i<=n; i++){
 }
 return result;
 ```
+#### Version 2
+這個作法的核心想法是利用一個 deque 去儲存目前的 range，然後在適當時機去清空它，以儲存下一個 range，在 loop body 中會根據正常情況以及收斂情況個別去作處理。
+
+這個作法的分析如下
+- 時間複雜度: O(n)，和 Version 1 一樣都去遍歷 nums 一次。
+- 空間複雜度: O(n)，但和 Version 1 不同的是，這個作法還額外需要一個 deque 來儲存目前的 range。

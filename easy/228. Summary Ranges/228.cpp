@@ -44,20 +44,18 @@ vector<string> Solution::summaryRanges1(vector<int>& nums) {
 vector<string> Solution::summaryRanges2(vector<int>& nums) {
     deque<int> q; // double-ended queue (empty, size, push_front, push_back, front, back, clear)
     vector<string> result;
-    auto begin = nums.begin();
-
-    while (begin != nums.end()){
-        if (q.empty() || *begin==q.back()+1){
-            q.push_back(*begin);
-            begin++;
+    auto ptr = nums.begin();
+    while (ptr != nums.end()){
+        if (q.empty() || *ptr==(q.back()+1)){//正常情況: 剛收斂完一個 range，或是接續目前的 range
+            q.push_back(*ptr);
+            ptr++;
         }
-        if (begin==nums.end() || *begin!=q.back()+1){
+        if (ptr==nums.end() || *ptr!=(q.back()+1)){//要收斂的兩種情況
             string str = "";
             if (q.size() == 1)
                 str = to_string(q.front());
             else
                 str += to_string(q.front()) + "->" + to_string(q.back());
-                
             result.push_back(str);
             q.clear();
         }

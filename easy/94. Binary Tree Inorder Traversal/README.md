@@ -1,5 +1,5 @@
 # 94. Binary Tree Inorder Traversal
-## Description
+## Description & Example
 - [leetcode](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)
 - [chatgpt](https://chatgpt.com/share/32d03aab-8e1c-4799-acb2-e0749362bea6)
 

@@ -4,7 +4,8 @@
 
 Description
 ```
-Write a function that takes the binary representation of a positive integer and returns the number of set bits it has (also known as the Hamming weight).
+Write a function that takes the binary representation of a positive integer 
+and returns the number of set bits it has (also known as the Hamming weight).
 ```
 給定一個正整數，回傳其二進制表示中有多少個 1 (set bits/Hamming weight)
 

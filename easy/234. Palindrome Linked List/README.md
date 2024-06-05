@@ -6,7 +6,7 @@ Description
 ```
 Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
 ```
-給定一個單向 linked list，判斷其是否為回文。其中 linked list 至少有一個 node，且每個 node 的值在 [0,9] 之間。
+給定一個單向 linked list，判斷其是否為回文。其中 linked list 至少有一個 node，且每個 node 的值域為 [0,9]
 
 Example
 ```
@@ -38,7 +38,3 @@ II. 遍歷一次 deque，利用 deque 的特性，每次比較頭尾的值是否
     - I. 遍歷一次 linked list 將 node 值存入 deque，時間複雜度為 O(n)
     - II. 遍歷一次 deque 來判斷是否為回文，時間複雜度為 O(n)
 - 空間複雜度: O(n)，因為需要一個 size 為 n 的 deque 來存放所有的 node 值，故實際的額外記憶體空間會較 Version 1 多。
-
-I. 遍歷一次 linked list 將所有 node 值存入 deque
-
-II. 遍歷一次 deque，利用 deque 的特性，每次比較頭尾的值是否相同，直到 deque 為空。

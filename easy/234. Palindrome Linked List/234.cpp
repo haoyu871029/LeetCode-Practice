@@ -47,12 +47,14 @@ bool Solution::isPalindrome1(ListNode* head) {
 
 
 bool Solution::isPalindrome2(ListNode* head) {
-    ListNode* temp = head;
+    /* I. 將所有 node 值存入 deque */
+    ListNode* tmp = head;
     deque<int> q;
-    while (temp != NULL){
-        q.push_back(temp->val);
-        temp = temp->next;
+    while (tmp != nullptr){
+        q.push_back(tmp->val);
+        tmp = tmp->next;
     }
+    /* II. 每次比較 deque 的頭尾值是否相同 */
     while (!q.empty()){
         if (q.front() != q.back())
             return false;

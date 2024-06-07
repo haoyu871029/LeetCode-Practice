@@ -1,21 +1,21 @@
 # 141. Linked List Cycle
-## Description & Example
 [leetcode](https://leetcode.com/problems/linked-list-cycle/)
-
-Description
+## Description & Example
+### Description
 ```
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 
-There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. 
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously 
+following the next pointer. 
 
-Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos 
+is not passed as a parameter.
 ```
 給定一條 linked list's head，判斷這個 linked list 是否具有 cycle。其他線索或限制如下:
 - pos 應該是用來測試的
 - list 中可能會有重複數字
 - list 可能是空的
-
-Example
+### Example
 ```
 Input: head->3->2->0->-4(->2), pos = 1
 Output: true

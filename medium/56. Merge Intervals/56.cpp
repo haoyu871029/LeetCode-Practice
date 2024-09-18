@@ -15,15 +15,15 @@ vector<vector<int>> Solution::merge(vector<vector<int>>& intervals) {
 
     /* pre-sorting */
     vector<pair<int,int>> p;
-    for(int i=0; i<intervals.size(); i++)
-        p.push_back({intervals[i][0],intervals[i][1]});
+    for(auto interval :intervals)
+        p.push_back({interval[0],interval[1]});
     sort(p.begin(),p.end());
 
-    /* merge */
+    /* merge intervals */
     vector<vector<int>> ans;
     int f = p[0].first;
     int s = p[0].second;
-    for (int i=0; i<p.size()-1; i++){ //注意，並非是 i<p.size()
+    for (int i=0; i<p.size()-1; i++){
         if(s >= p[i+1].first) //重疊的情況 ex. [1,4] [2,3]
             s = max(s, p[i+1].second); 
         else{ //不重疊的情況 ex. [1,3] [4,5]

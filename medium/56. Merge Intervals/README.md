@@ -17,6 +17,28 @@ Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
 先將 vector intervals 中的每個 interval 轉成 pair，接著對 vector intervals 進行預排序。接著，遍歷一遍 vector intervals，過程中判斷重疊與不重疊的情況，看是要做合併還是提交。
 
 ```cpp
+vector<vector<int>> merge(vector<vector<int>>& intervals) {
+    /* edge case */
+    if (只有一個 interval)
+        return intervals;
+    /* pre-sorting */
+    vector<pair<int, int>> p;
+    for(vector intervals){
+        將每個 interval 轉成 pair 存入 vector p
+    }
+    sort(vector p);
+    /* merge intervals */
+    vector<vector<int>> ans;
+    for (vector p){
+        if (當前 interval 與下一個 interval 發生重疊){
+            合併兩個 intervals
+        }
+        else{
+            提交當前 interval (加入 ans)
+        }
+    }
+    return ans;
+}
 ```
 
 **Discussions**

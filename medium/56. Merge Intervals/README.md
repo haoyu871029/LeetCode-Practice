@@ -7,6 +7,7 @@
 
 ```
 Example
+
 Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
 Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
@@ -20,23 +21,22 @@ Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
 ```
 vector<vector<int>> merge(vector<vector<int>>& intervals) {
     /* edge case */
-    if (only one interval)
+    if (只有一個 interval)
         return intervals;
 
     /* pre-sorting */
     vector<pair<int, int>> p;
-    for(vector intervals)
-        convert each interval to a pair and store it in vector p
-    sort(vector p);
+    for (intervals)
+        將每個 interval 轉成 pair 存入 p
+    sort(p);
 
     /* merge intervals */
     vector<vector<int>> ans;
-    for (vector p){
-        if (the current interval overlaps with the next interval)
-            merge the two intervals
+    for (p)
+        if (當前 interval 與下一個 interval 發生重疊)
+            合併兩個 intervals
         else
-            add the current interval to ans
-    }
+            提交當前 interval
     return ans;
 }
 ```
@@ -48,9 +48,9 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
     > 排序的簡便性與效率。`pair<int, int>` 在 C++ 中具有預定義的比較運算子，這意味著當你對 pair 進行排序時，會自動按照第一個元素（即 interval 的起始點）進行排序，如果第一個元素相同，則會按照第二個元素（即 interval 的結束點）排序。這種排序方式正好符合合併 interval 的需求。相較之下，雖然 `vector<int>` 也有定義好的比較運算子（會進行字典序比較），但在處理固定大小（兩個元素）的資料時，pair 的性能和記憶體使用會更有效率。
 
 **< Analysis >**
-- 時間複雜度: O(nlogn)
+- Time complexity: O(nlogn)
     - O(nlogn) for pre-sorting
     - O(n) for traversing the vector
-- 空間複雜度: O(n)
+- Space complexity: O(n)
     - O(1) for p, f, s
     - O(n) for ans

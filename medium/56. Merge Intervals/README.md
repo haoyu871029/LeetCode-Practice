@@ -13,9 +13,11 @@ Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
 ```
 ## .cpp
 ### Version 1
+:::info
 **Description**
-先將 vector intervals 中的每個 interval 轉成 pair，接著對 vector intervals 進行預排序。接著，遍歷一遍 vector intervals，過程中判斷重疊與不重疊的情況，看是要做合併還是提交。
 
+先將 vector intervals 中的每個 interval 轉成 pair，接著對 vector intervals 進行預排序。接著，遍歷一遍 vector intervals，過程中判斷重疊與不重疊的情況，看是要做合併還是提交。
+:::
 **Discussions**
 1. 為什麼迴圈終止條件為 `i<p.size()-1` 而非 `i<p.size()` ?
 因為每一圈會使用到 `p[i+1]` 來判斷是否有重疊，因此迴圈只跑到倒數第二個元素，而最後一個 intervals 會在迴圈執行完後再做一次 push_back 加入。

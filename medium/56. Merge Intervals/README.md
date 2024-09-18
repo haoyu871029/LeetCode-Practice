@@ -21,11 +21,13 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
     /* edge case */
     if (only one interval)
         return intervals;
+
     /* pre-sorting */
     vector<pair<int, int>> p;
     for(vector intervals)
         convert each interval to a pair and store it in vector p
     sort(vector p);
+    
     /* merge intervals */
     vector<vector<int>> ans;
     for (vector p){

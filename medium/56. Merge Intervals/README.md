@@ -13,6 +13,7 @@ Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
 ```
 ## .cpp
 ### Version 1
+<font color="blue">mmm</font>
 **Description**  
 先將 vector intervals 中的每個 interval 轉成 pair，接著對 vector intervals 進行預排序。接著，遍歷一遍 vector intervals，過程中判斷重疊與不重疊的情況，看是要做合併還是提交。
 
@@ -27,7 +28,7 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
     for(vector intervals)
         convert each interval to a pair and store it in vector p
     sort(vector p);
-    
+
     /* merge intervals */
     vector<vector<int>> ans;
     for (vector p){

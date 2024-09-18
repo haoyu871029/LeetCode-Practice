@@ -1,9 +1,7 @@
 # 56. Merge Intervals
 [leetcode](https://leetcode.com/problems/merge-intervals/description/)
 ## Introduction
-給定一個含有多個區間的 intervals vector，將有重疊部分的多個區間合併成一個，並回傳整理後的 result vector。其他線索或限制如下:
-- intervals vector 不會是空的，至少會有一個區間存在。
-- 合併有重疊的 intervals 即可，例如 [1,3] [4,5] 就不需要合併成 [1,5]
+給定一個含有多個區間的 intervals vector，將有重疊部分的多個區間合併成一個，並回傳整理後的 result vector。
 
 ```
 Example
@@ -12,6 +10,10 @@ Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
 Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
 ```
+
+其他線索或限制如下:
+- intervals vector 不會是空的，至少會有一個區間存在。
+- 合併有重疊的 intervals 即可，例如 [1,3] [4,5] 就不需要合併成 [1,5]
 ## .cpp
 ### Version 1
 **< Description >**

@@ -19,43 +19,16 @@
 - 字串中的默認順序會是 (I. 空白-正負號-起始零)-(II. 數字字串-非數字字串)
 ## .cpp
 **< Description >**
-- Processing for I. 階段是為了判斷正負號，並找到 II. 在字串中開始的位置。
-- Processing for II. 階段首先確定數字字串在整個字串中的範圍(頭尾位置)，再根據一些判斷處理可提前結束的情況，例如不存在數字字串或是溢位發生。
-- Convertion 階段處理那些不需提前結束的情況，將數字字串部分轉換成數字並回傳。
-
 ```
 int myAtoi(string s) {
-    /* Setting and Edge Case */
-    bool neg = false; //是否為負數
-    int n = s.size(); //字串長度
-    int i = 0; //欲代表 II. 中的第一個非數字字元在整個字串中的位置
-    int j = 0; //欲代表 II. 中的第一個字元在整個字串中的位置
-    if (s 為空字串) return 0;
-
     /* Processing for I. */
-    while (s[i] 是空白) i++;
-    if (s[i] 是負號) i++, neg=true;
-    else if (s[i] 是正號) i++;
-    while (s[i] 是起始零) i++;
+    判斷正負號，並找到 II. 在字串中開始的位置。
 
     /* Processing for II. */
-    j = i;
-    for (子字串 II.)
-        if (s[i] 非數字) break;
-    //此時確定 j 值與 i 值，也就是數字字串的範圍
-    if (i == j)
-    if (i-j > 10)
-    if (i-j == 10)
-        if (neg) {
-            比對數字字串與 "2147483648"
-        }
-        else {
-            比對數字字串與 "2147483647"
-        }
+    首先確定數字字串在整個字串中的範圍(頭尾位置)，再根據一些判斷處理可提前結束的情況，例如不存在數字字串或是溢位發生。
 
     /* Convertion */
-    int res = stoi(數字字串)
-    return neg ? -res : res;
+    處理那些不需提前結束的情況，將數字字串部分轉換成數字並回傳。
 }
 ```
 

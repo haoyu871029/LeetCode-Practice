@@ -8,13 +8,15 @@ public:
 };
 
 vector<vector<int>> Solution::generate(int numRows) {
-    vector<vector<int>> ans;
+    /* Initialization */
+    vector<vector<int>> ans; //代表帕斯卡三角形
     for (int i=1; i<=numRows; i++){
         ans.push_back(vector<int>(i, 1));
     }
-    for (int i=2; i<numRows; i++){//前兩列 [1] 和 [1,1] 不用處理
-        int size = ans[i].size();
-        for (int j=1; j<=(size-2); j++){//中間非 1 的部分
+    /* Processing (DP) */
+    for (int i=2; i<numRows; i++){
+        int n = ans[i].size();
+        for (int j=1; j<=(n-2); j++){
             ans[i][j] = ans[i-1][j-1] + ans[i-1][j];
             //ans[i-1][j-1] 代表左上的值
             //ans[i-1][j] 代表右上的值

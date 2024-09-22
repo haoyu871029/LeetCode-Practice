@@ -37,11 +37,14 @@ vector<vector<int>> Solution::generate(int numRows) {
 
 **< Discussions >**
 - 注意每個 for 迴圈的範圍
-     >- `for (int i=1; i<=numRows; i++)` 因為共需要初始化 numRows 列
-     >- `for (int i=2; i<numRows; i++)` 因為若視整個三角形為第 0 列到第 (numRows-1) 列，則前兩列 `[1]` 和 `[1,1]` 是不需要處理的，也就是第 0 列和第 1 列。
-     >- `for (int j=1; j<=(n-2); j++)` 因為若視三角形中每列的元素為第 0 個到第 (n-1) 個，則頭尾的 1 是不需要處理的，也就是每列的第 0 個和第 (n-1) 個元素。
+     >- `for (int i=1; i<=numRows; i++)`  
+     因為共需要初始化 numRows 列
+     >- `for (int i=2; i<numRows; i++)`  
+     因為若視整個三角形為第 0 列到第 (numRows-1) 列，則前兩列 `[1]` 和 `[1,1]` 是不需要處理的，也就是第 0 列和第 1 列。
+     >- `for (int j=1; j<=(n-2); j++)`  
+     因為若視三角形中每列的元素為第 0 個到第 (n-1) 個，則頭尾的 1 是不需要處理的，也就是每列的第 0 個和第 (n-1) 個元素。
 
-**< Analysis >**
+**< Analysis >**  
 以下的 n 代表 numRows
 - Time complexity: O(n^2)
     - O(n^2) for Initialization

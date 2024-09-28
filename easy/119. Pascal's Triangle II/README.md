@@ -17,12 +17,9 @@ Example
 Input: rowIndex = 3
 Output: [1,3,3,1]
 ```
-
-其他線索或限制如下:
-- xxx
-- xxx
 ## .cpp
 **< Description >**
+
 (用和 118 類似的邏輯) 先初始化一個所有元素皆為 1 的帕斯卡三角形，建到指定列即可。接著透過 DP 完成每一列的元素值，最後回傳指定列。
 
 ```
@@ -47,6 +44,7 @@ vector<int> getRow(int rowIndex) {
 ```
 
 **< Analysis >**
+
 n 代表指定之 rowIndex
 - Time complexity: O(n^2)
 - Space complexity: O(n^2)

@@ -1,6 +1,6 @@
 # [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=company&envId=google&favoriteSlug=google-thirty-days)
 ## Introduction
-輸入一個 non-decreasing 數列 `vector<int>& nums`，本題要求將 `nums` 中出現過的相異數字顯示在數列前段，並回傳新的長度。
+輸入一個 non-decreasing 數列 `vector<int>& nums`，本題要求將 `nums` 中出現過的相異數字顯示在數列前段，並回傳相異數字的個數。
 
 ```
 Example
@@ -17,7 +17,7 @@ Explanation: 數列中出現過 0, 1, 2, 3, 4 這五個相異數，因此回傳 
 ## .cpp
 **< Description >**
 
-解題邏輯為，透過一個變數代表目前欲擺放的位置，一個變數代表目前遍歷到的位置，並在遍歷的過程中透過比對相鄰的兩個數字來決定是否要作擺放，而遍歷的速度一定比擺放的速度快。
+解題邏輯為，透過一個變數 idx 代表目前欲擺放的位置，一個變數 idx 代表目前遍歷到的位置，並在遍歷的過程中透過比對相鄰的兩個數字來決定是否要作擺放，而遍歷的速度一定比擺放的速度快。
 
 **< Analysis >**
 - Time complexity: O(n)

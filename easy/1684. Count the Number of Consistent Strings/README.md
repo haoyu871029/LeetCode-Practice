@@ -1,6 +1,6 @@
 # [1684. Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/description/?envType=company&envId=google&favoriteSlug=google-thirty-days)
 ## Introduction
-輸入兩個參數 `string allowed` 與 `vector<string>& words`，其中 `allowed` 表示可用的字母有哪些，而 `words` 則整理了一些單字字串。本題為判斷 `words` 中有幾個字串為 "consistent"，即字串中僅出現 `allowed` 中出現的可用字母。
+輸入兩個參數 `string allowed` 與 `vector<string>& words`，其中 `allowed` 表示可用的字母有哪些，而 `words` 則整理了一些單字字串。本題為判斷 `words` 中有幾個字串為 "consistent"，即字串中僅出現 `allowed` 規範的可用字母。
 
 ```
 Example

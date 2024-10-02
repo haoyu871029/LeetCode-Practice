@@ -29,7 +29,6 @@ int Solution::minimumDifference(vector<int>& nums, int k) {
 
 int main() {
     Solution sol; 
-    //nums = [9,4,1,7], k = 2
     vector<int> nums = {9,4,1,7};
     int k = 2;
     cout << sol.minimumDifference(nums, k) << endl; //expected output is 2

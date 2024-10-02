@@ -1,13 +1,13 @@
 # [1984. Minimum Difference Between Highest and Lowest of K Scores](https://leetcode.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/description/?envType=company&envId=google&favoriteSlug=google-thirty-days)
 ## Introduction
-給定一個整數陣列 `vector<int>& nums`，代表學生的分數，以及一個整數 `int k` 代表欲選擇的學生數。回傳在任意選擇 k 的學生的情況下，這 k 個學生中最高分與最低分的可能最小差值。
+給定一個整數陣列 `vector<int>& nums`，代表學生的分數，以及一個整數 `int k` 代表欲選擇的學生數。回傳在任意選擇 k 個學生的情況下，這 k 個學生中最高分與最低分的可能最小差值。
 
 ```
 Example
 
 Input: nums = [9,4,1,7], k = 2
 Output: 2
-Explanation: 挑選 7 與 9，則最高分與最低分的差值為 2，是所有組合中最低的。
+Explanation: 在 [7,9] 這個組合中，最高分與最低分的差值為 2，是所有組合中最低的。
 ```
 
 其他線索或限制如下:

@@ -16,7 +16,7 @@ Explanation: The subarray [4,-1,2,1] has the largest sum 6.
 ## .cpp
 **< Description >**
 
-利用 `vector<int> dp0(nums.size())` 和 `vector<int> dp1(nums.size())` 這兩個陣列來執行 dp
+利用 `vector<int> dp0(n)` 和 `vector<int> dp1(n)` 這兩個陣列來實作 dp 解
 
 `dp1[i]` 代表子數列在以 `nums[i]` 結尾的前提下，最大的子數列和。而 `dp1[i]` 只可能會是以下兩種情況之一：
 - 子數列只有 `nums[i]`，，則該子數列和的最大值為 `nums[i]`

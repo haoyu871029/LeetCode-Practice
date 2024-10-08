@@ -28,7 +28,7 @@ Explanation:
 
 **< Discussions >**
 1. xxx ?
-    > xxx
+    > 感覺把 bob 也用一個 unordered_set 去存，就可以做到和 version 1 差不多的效果了，也不用去想 del 
 2. xxx ?
     > 
 

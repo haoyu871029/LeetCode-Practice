@@ -1,6 +1,7 @@
 # [884. Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences/description/?envType=company&envId=google&favoriteSlug=google-thirty-days)
 ## Introduction
-所謂的 "uncommon word"，即只在其中一個句子中出現，且只出現一次的單字。本題給定兩個字串 `string s1` 和 `string s2` 表示兩個句子，需回傳 uncommon words。
+所謂的 "uncommon word"，即只在其中一個句子中出現，且只出現一次的單字。  
+本題給定兩個字串 `string s1` 和 `string s2` 表示兩個句子，需回傳 uncommon words。
 
 ```
 Example

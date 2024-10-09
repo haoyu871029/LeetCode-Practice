@@ -1,11 +1,13 @@
 # [1813. Sentence Similarity III](https://leetcode.com/problems/sentence-similarity-iii/description/?source=submission-noac)
 ## Introduction
-給定兩個句子 `string sentence1` 和 `string sentence2`，判斷兩者是否相似。所謂相似，即在某句中插入一個句子(可能為空)後，可以使得兩個句子相等。
+給定兩個句子 `string sentence1` 和 `string sentence2`，判斷兩者是否相似。
+所謂相似，即在某句中插入一個句子(可能為空)後，可以使得兩個句子相等。
 ```
 Example
 
 Input: sentence1 = "My name is Haley", sentence2 = "My Haley"
 Output: true
+Explanation: sentence2 can be turned to sentence1 by inserting "name is" between "My" and "Haley".
 ```
 
 其他線索或限制如下:
